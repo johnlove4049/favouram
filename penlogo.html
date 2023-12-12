@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Amos's Professional Website</title>
+  <style>
+    body {
+      background-color: black;
+      color: limegreen;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #logo {
+      max-width: 50%; /* Adjust the percentage as needed */
+      height: auto;
+    }
+
+    #cmd {
+      white-space: pre-line;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="logo" src="favour.png" alt="Logo">
+  </header>
+  <div id="cmd"></div>
+
+  <script>
+    const text = `Welcome to Favour Amos's Professional Website! Delve into the realm of cybersecurity excellence with a skilled Web Developer. My expertise extends to crafting cutting-edge hacking tools and collaborating with diverse companies to fortify their security.
+
+Explore the site for insightful articles on the latest cybersecurity trends, sneak peeks into innovative projects, and valuable resources to elevate your knowledge. Whether you're a fellow enthusiast or a company seeking collaboration, I'm here to connect.
+
+For inquiries or collaborations, feel free to reach out at +1 8575773559 or via email at danielamos001@proton.me Your journey into the world of cybersecurity starts here. Thank you for visiting, and enjoy your experience!`;
+
+    let index = 0;
+    const cmdElement = document.getElementById('cmd');
+
+    function typeText() {
+      cmdElement.textContent += text[index];
+      index++;
+      if (index < text.length) {
+        setTimeout(typeText, 50); // Adjust typing speed here (in milliseconds)
+      }
+    }
+
+    typeText();
+  </script>
+</body>
+</html>
